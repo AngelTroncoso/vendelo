@@ -1,0 +1,10 @@
+<h1> productos:</h1>
+
+<%= @products.count %>
+
+<% @products.each do |product| %>
+    <%= link_to product_path(product.id) do %>
+         <h2><%= product.title %></h2>
+         <span><%= product.price %>$</span>
+    <% end %>
+<% end %>
